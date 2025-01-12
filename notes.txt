@@ -1,0 +1,13 @@
+Rundown of what I want to achieve:
+
+- Functioning website where a user can book a meeting for a free assesment
+
+- The website has a responsive navbar, a hero section, a about section & a booking section - all on one page
+
+- The website will also contain a Blog as a seperate page showcasing three blog posts
+
+- Each blog post will have the ability to create, read, update and delete comments
+
+- The user will have to log in to interactive with the blog
+
+- The user will need to be authenicated via a username/email and password.
