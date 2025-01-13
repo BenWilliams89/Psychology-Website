@@ -4,6 +4,13 @@ Introduction:
 
 - I built a website for a doctor of psychology who is looking for her own website.
 
+- Frontend Development: HTML, CSS, JavaScript
+- Backend Development: Django web framework
+- Database Management: Django
+- Agile Methodology: Project planning and tracking using Agile principles
+- Version Control: Git & GitHub
+- AI Integration: Exploring the potential of AI tools in the development process.
+
 Key Objectives/Client Brief:
 
 - The website must be resposnive and work across all device sizes
@@ -91,9 +98,6 @@ Security:
 
 -
 
-Wireframes:
-
--
 
 Colors:
 
@@ -116,6 +120,8 @@ Testing:
 -
 
 Credits:
+
+- Massive Thanks to Dillon Mccaffrey & all of the Code Institute Staff who have helped me get this far.
 
 
 
