@@ -32,6 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-benwilliams-psychologyw-5350l5288ud.ws.codeinstitute-ide.net',]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-benwilliams-psychologyw-5350l5288ud.ws.codeinstitute-ide.net'
+]
 
 # Application definition
 
