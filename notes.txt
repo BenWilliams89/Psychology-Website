@@ -11,3 +11,12 @@ Rundown of what I want to achieve:
 - The user will have to log in to interactive with the blog
 
 - The user will need to be authenicated via a username/email and password.
+
+
+
+This was in url website incase it is required again
+
+
+- from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from .models import Post
