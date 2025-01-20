@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home.html'),
+    path('blog/', views.PostList.as_view(), name='blog.html')
 ]
