@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, ListView
+from django.views.generic import ListView
 from .models import Post
 from .forms import PostForm
 from django.urls import reverse_lazy
@@ -10,7 +10,7 @@ def home(request):
     return render(request, 'home.html', {})
 
 
-class PostList(generic.ListView):
+class PostList(ListView):
     queryset = Post.objects.all()
     template_name = "blog.html"
     paginate_by = 6
