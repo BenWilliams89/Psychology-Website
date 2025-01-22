@@ -40,7 +40,7 @@ class PostAdd(CreateView):
 
 
 
-class EditPost(UpdateView):
+class UpdatePostView(UpdateView):
     model = Post
-    template_name = 'edit_post.html'
+    template_name = 'update_post.html'
     fields = '__all__'
