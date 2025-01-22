@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Post
 from .forms import PostForm
 from django.urls import reverse_lazy
@@ -25,3 +25,7 @@ def post_detail(request, slug):
         "post_detail.html",
         {"post": post},
     )
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = 'post_detail.html'
