@@ -52,6 +52,7 @@ Agile Methodologies:
 
 The use of AI:
 
+- Chat GPT helped me create blog posts that were inline with the services that the website offer
 - AI was used to create the ERD from my inital outlines
 ![AI suggested this would be a good ERD for blog posts](/assets/Blog%20Posts%20ERD.png)
 ![AI suggested this would be a good ERD for blog comment posts](/assets/Comment%20ERD.png)
