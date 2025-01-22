@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io (2)/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 
@@ -50,6 +50,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    {% if user.is_authenticated %}
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'add_post' %}">Add A Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'blog.html' %}">Update A Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'blog.html' %}">Delete A Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="#">The Process</a>
@@ -66,14 +83,6 @@
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="{% url 'blog.html' %}">Blog</a>
                     </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'add_post' %}">Add a Blog</a>
-                    </li>
-                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" {% if request.path == login_url %}active{% endif %} aria-current="page" href="{% url 'account_login' %}">Login</a>
                     </li>
