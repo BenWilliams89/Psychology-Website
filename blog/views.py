@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 from .forms import PostForm
 from django.urls import reverse_lazy
@@ -29,3 +29,10 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+
+
+class PostAdd(CreateView):
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__'
