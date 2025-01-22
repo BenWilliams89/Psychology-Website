@@ -4,9 +4,17 @@
 
 {% load static %}
 
+<div class="container text-center">
 <h1>Add A Blog Post</h1>
 
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success" href="{% url 'home.html' %}">Add Blog Post</button>
 
+
+</form>
+</div>
 
 
 
