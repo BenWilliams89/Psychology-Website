@@ -12,7 +12,7 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }} <a href="{% url 'update_post' post.pk %}">Edit Blog</a></p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <img src="https://plus.unsplash.com/premium_photo-1664378802354-7ec2fece08c2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2J0fGVufDB8fDB8fHww" class="scale" alt="placeholder">

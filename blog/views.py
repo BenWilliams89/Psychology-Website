@@ -42,5 +42,6 @@ class PostAdd(CreateView):
 
 class UpdatePostView(UpdateView):
     model = Post
+    form_class = PostForm
     template_name = 'update_post.html'
-    fields = '__all__'
+    #fields = '__all__'
