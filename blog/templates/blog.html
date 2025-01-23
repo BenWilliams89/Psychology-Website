@@ -19,25 +19,24 @@
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.excerpt }}</p>
                     </a>
-                    <p class="card-text text-muted h6">{{ post.created_on}}</p>
-                        <hr />
+                    <p class="card-text text-muted h6">{{ post.created_on}}
+                        <hr>
                     {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
                       <a class="btn btn-warning" href="{% url 'update_post' post.pk %}">Edit</a>
                         <a class="btn btn-danger" href="{% url 'delete_post' post.pk %}">Delete</a>
                     
                         {% else %}
-                        {% if user.id != post.author.id %}
+                        
                         <a class="btn btn-primary" href="{% url 'update_post' post.pk %}">Add A Comment</a>
                         <a class="btn btn-warning" href="{% url 'update_post' post.pk %}">Edit Comment</a>
                         <a class="btn btn-danger" href="{% url 'delete_post' post.pk %}">Delete Comment</a>
-                    {% endif %}
                         {% endif %}
-                
+                    {% endif %}
+                    </p>
                 </div>
             </div>
         </div>
-        {% endif %}
         
         {% if forloop.counter|divisibleby:3 %}
     </div>
