@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% block title %} Add a Comment {% endblock %}
+{% block content %}
+
+{% load static %}
+
+<div class="container text-center">
+<br>
+{% if user.is_authenticated %}
+<h1>Add A Comment Post</h1>
+<br>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
+    <a href="{% url 'blog.html' %}" class="btn btn-success mx-5 my-4">Add Comment</a>
+</form>
+</div>
+{% else %}
+<h2>You need to register to leave a comment</h2>
+<a href="{% url 'account_signup' %}">Register Here</a>
+{% endif %}
+
+
+
+{% endblock %}
