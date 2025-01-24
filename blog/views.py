@@ -10,6 +10,18 @@ def home(request):
     return render(request, 'home.html', {})
 
 
+
+#def add_comment(request):
+  #  if request.method == 'POST':
+      #  form = CommentForm(request.POST)
+      #  if form.is_valid():
+          #  form.save()
+           # return redirect('some-view-name')
+    #else:
+       # form = CommentForm()
+   # return render(request, 'your_template.html', {'form': form})
+
+
 class PostList(ListView):
     queryset = Post.objects.all()
     template_name = "blog.html"
@@ -53,6 +65,7 @@ class CommentAdd(CreateView):
     form_class = CommentForm
     template_name = 'add_comment.html'
     success_url = reverse_lazy('blog.html')
+
     
     
 
