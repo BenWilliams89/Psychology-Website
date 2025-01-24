@@ -27,7 +27,6 @@ class PostAdd(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    
     success_url = reverse_lazy('blog.html')
 
 
@@ -36,7 +35,7 @@ class UpdatePostView(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'update_post.html'
-    
+    success_url = reverse_lazy('blog.html')
 
 
 
@@ -54,3 +53,17 @@ class CommentAdd(CreateView):
     template_name = 'add_comment.html'
     success_url = reverse_lazy('add_comment.html')
     
+
+
+class UpdateCommentView(UpdateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'update_comment.html'
+    success_url = reverse_lazy('blog.html')
+
+
+
+class DeleteCommentView(DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('blog.html')

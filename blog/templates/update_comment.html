@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-{% block title %}Edit A Blog{% endblock %}
+{% block title %}Edit A Comment{% endblock %}
 {% block content %}
 
 {% load static %}
@@ -7,7 +7,7 @@
 <div class="container text-center">
 <br>
 {% if user.is_authenticated %}
-<h1>Edit A Post</h1>
+<h1>Edit A Comment</h1>
 <br>
 <form method="POST">
     {% csrf_token %}
@@ -17,7 +17,7 @@
 </form>
 </div>
 {% else %}
-<h2>Only Emily has authority to update a blog</h2><br>
+<h2>Only the comment author has authority to update a comment</h2><br>
 <a class="btn btn-primary" href="{% url 'home.html' %}">Return Home</a>
 {% endif %}
 

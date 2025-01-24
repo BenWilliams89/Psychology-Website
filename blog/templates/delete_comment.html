@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% block title %} Delete a New Blog {% endblock %}
+{% block content %}
+
+{% load static %}
+
+<div class="container text-center">
+<br>
+{% if user.is_authenticated %}
+<h1> Delete A Blog Post</h1>
+<br>
+<h3>Delete: {{ post.title }}</h3>
+
+
+<br>
+<form method="POST">
+    {% csrf_token %}
+    <strong>Are You Sure You Want To Delete</strong><br>
+    <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
+    <button class="btn btn-danger">Delete Blog Post</button>
+</form>
+</div>
+{% else %}
+<h2>Only the author of the comment has authority to delete a comment</h2><br>
+<a class="btn btn-primary" href="{% url 'home.html' %}">Return Home</a>
+{% endif %}
+
+
+{% endblock %}
