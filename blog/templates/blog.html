@@ -25,14 +25,16 @@
                         {% if user.id == post.author.id %}
                       <a class="btn btn-warning" href="{% url 'update_post' post.pk %}">Edit</a>
                         <a class="btn btn-danger" href="{% url 'delete_post' post.pk %}">Delete</a>
-                    
-                        {% else %}
-                        
-                        <a class="btn btn-primary" href="{% url 'update_post' post.pk %}">Add A Comment</a>
-                        <a class="btn btn-warning" href="{% url 'update_post' post.pk %}">Edit Comment</a>
-                        <a class="btn btn-danger" href="{% url 'delete_post' post.pk %}">Delete Comment</a>
-                        {% endif %}
                     {% endif %}
+                        {% endif %}
+                            {% if user.username == 'Ben' %}
+                                <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
+                                <a class="btn btn-warning" href="{% url 'update_comment' post.pk %}">Edit Comment</a>
+                                <a class="btn btn-danger" href="{% url 'delete_comment' post.pk %}">Delete Comment</a>
+                            {% else %}
+                                <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
+                            {% endif %}
+                        
                     </p>
                 </div>
             </div>

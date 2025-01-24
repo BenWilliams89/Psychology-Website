@@ -20,6 +20,7 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
     template_name = 'post_detail.html'
+    success_url = reverse_lazy('blog.html')
 
 
 
@@ -51,7 +52,7 @@ class CommentAdd(CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
-    success_url = reverse_lazy('add_comment.html')
+    success_url = reverse_lazy('blog.html')
     
 
 
