@@ -6,18 +6,17 @@
 
 <div class="container text-center">
 <br>
-{% if user.is_authenticated %}
-<h1> Delete A Blog Post</h1>
+{% if user.username == 'Ben' %}
+<h1> Delete My Comment</h1>
 <br>
-<h3>Delete: {{ post.title }}</h3>
+<h3>Delete: {{ comment.body }}</h3>
 
 
 <br>
 <form method="POST">
     {% csrf_token %}
-    <strong>Are You Sure You Want To Delete</strong><br>
     <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
-    <button class="btn btn-danger">Delete Blog Post</button>
+    <button class="btn btn-danger">Delete My Comment</button>
 </form>
 </div>
 {% else %}
