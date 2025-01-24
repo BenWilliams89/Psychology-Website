@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-{% block title %} Add a Comment {% endblock %}
+{% block title %} Add A Comment {% endblock %}
 {% block content %}
 
 {% load static %}
@@ -7,7 +7,7 @@
 <div class="container text-center">
 <br>
 {% if user.is_authenticated %}
-<h1>Add A Comment Post</h1>
+<h1>Add A Comment</h1>
 <br>
 <form method="POST">
     {% csrf_token %}
@@ -17,8 +17,8 @@
 </form>
 </div>
 {% else %}
-<h2>You need to register to leave a comment</h2>
-<a href="{% url 'account_signup' %}">Register Here</a>
+<h2>You need to register to leave a comment</h2><br>
+<a class="btn btn-primary" href="{% url 'account_signup' %}">Register Here</a>
 {% endif %}
 
 

@@ -6,6 +6,7 @@
 
 <div class="container text-center">
 <br>
+{% if user.is_authenticated %}
 <h1>Add A Blog Post</h1>
 <br>
 <form method="POST">
@@ -13,11 +14,12 @@
     {{ form.as_p }}
     <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
     <button class="btn btn-success">Add Blog Post</button>
-    
-
-
 </form>
 </div>
+{% else %}
+<h2>You need to register to Add a Blog</h2><br>
+<a class="btn btn-primary" href="{% url 'account_signup' %}">Register Here</a>
+{% endif %}
 
 
 
