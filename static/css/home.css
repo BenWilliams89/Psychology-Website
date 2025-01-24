@@ -11,7 +11,7 @@ h6 {
 }
 
 .panel {
-    background-color: white;
+    background-color: rgb(99, 33, 176);
     border-radius: 10px;
     padding: 15px 25px;
     width: 100%;
@@ -36,7 +36,7 @@ h6 {
 }
 
 .pricing-header {
-    color: #0b0a0a;
+    color: #ffffff;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -44,7 +44,7 @@ h6 {
 .pricing-features {
     list-style: none;
     margin: 50px 0 25px;
-    color: #242d37;
+    color: #eaeff4;
 }
 
 .pricing-features-item {
@@ -61,7 +61,7 @@ h6 {
 }
 
 .pricing-price {
-    color: #3338a1;
+    color: #cc9c0a;
     display: block;
     font-size: 32px;
     font-weight: 700;
@@ -70,7 +70,7 @@ h6 {
 .pricing-button {
     border: 1px solid #9dd1ff;
     border-radius: 10px;
-    color: #0934aa;
+    color: #ffffff;
     display: inline-block;
     padding: 15px 35px;
     text-decoration: none;
@@ -79,16 +79,16 @@ h6 {
 }
 
 .pricing-button:hover, .pricing-button:focus {
-    background-color: #f8f00ba0;
+    background-color: #f8b10ba0;
 }
 
 .pricing-button.is-featured {
-    background-color: #e7bf0c;
+    background-color: #f1a707;
     color: white;
 }
 
 .pricing-button.is-featured:hover, .pricing-button.is-featured:focus {
-    background-color: #269aff;
+    background-color: #c6722e;
     color: white;
 }
 
@@ -96,6 +96,14 @@ h6 {
     border-radius: 10px;
     width:400px;
     height:400px;
+}
+
+/* about styling */
+
+.emily {
+    width:400px;
+    height:700px;
+    border-radius: 10px;
 }
 
 

@@ -18,11 +18,11 @@ body {
 }
 
 .light-bg {
-    background-color: #1f548a;
+    background-color: #293a5d;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #28303f;
 }
 
 .main-bg {
@@ -178,6 +178,10 @@ body {
     color: white;
 }
 
-.navbar-custom .navlink {
-    color: white;
+.navbar-custom .navlink ul li {
+    color: #fff;
+}
+
+.navbar-custom .nav-link:hover {
+    background-color: #ece110;
 }
