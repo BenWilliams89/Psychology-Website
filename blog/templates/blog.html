@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<div class="col-12 mt-3 left">
+<div class="p-5 mt-5 col-12 mt-3 left">
     <div class="row">
         {% for post in post_list %}
         <div class="col-md-4">
@@ -50,7 +50,28 @@
 </div>
 </div>
 
+<script>
+    document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                let section = document.querySelector(e.target.getAttribute("href"));
+                if (section) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                    window.scroll({
+                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                        behavior: "smooth",
+                    });
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show"); // Collapse navbar
+                }
+            });
+        });
+  </script>
 
 </html>
 
 {% endblock content %}
+

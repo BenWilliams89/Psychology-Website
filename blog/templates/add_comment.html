@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<div class="container text-center">
+<div class="container mt-5 p-5 text-center">
 <br>
 {% if user.is_authenticated %}
 <h1>Add A Comment</h1>
@@ -13,14 +13,34 @@
     {% csrf_token %}
     {{ form.as_p }}
     <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
-    <a href="{% url 'blog.html' %}" class="btn btn-success mx-5 my-4">Add Comment</a>
+    <button class="btn btn-success">Add a Comment</button>
 </form>
 </div>
 {% else %}
 <h2>You need to register to leave a comment</h2><br>
 <a class="btn btn-primary" href="{% url 'account_signup' %}">Register Here</a>
+<a class="btn btn-warning mx-5" href="{% url 'home.html' %}">Return Home</a>
 {% endif %}
 
-
+<script>
+    document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                let section = document.querySelector(e.target.getAttribute("href"));
+                if (section) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                    window.scroll({
+                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                        behavior: "smooth",
+                    });
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show"); // Collapse navbar
+                }
+            });
+        });
+  </script>
 
 {% endblock %}

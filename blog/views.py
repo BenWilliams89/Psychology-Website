@@ -54,6 +54,7 @@ class CommentAdd(CreateView):
     template_name = 'add_comment.html'
     success_url = reverse_lazy('blog.html')
     
+    
 
 
 class UpdateCommentView(UpdateView):
