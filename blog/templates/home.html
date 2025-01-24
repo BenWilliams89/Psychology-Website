@@ -1,7 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
-
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 
 <!--Header section-->
 <section class="header p-5 mt-4 text-center text-md-start" id="hero">
@@ -70,9 +72,10 @@
         <h2 class="text-center mt-5 mb-5">Who Is Therapy For?</h2>
         <div class="row text-center g-5">
         <div class="col-md-6 text-column">
-          <h3 class="mb-4">Adults:</h3>
+          <h3 class="mb-5 mt-4">Adults:</h3>
   
           <p>From single assessments to ongoing therapy, our personalised care options are for anyone seeking mental health or neurodevelopmental support. </p>
+          <p class="mt-3">You don’t have to do this on your own. Whether you’re tackling work stress, academic pressures, we’ve got a solution for you. </p>
           
           
           <a href="#"  class="btn btn-warning my-3">Get A Free Assesment</a>
@@ -87,8 +90,11 @@
             <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2lkcyUyMHJlYWRpbmd8ZW58MHx8MHx8fDA%3D" alt="A women looking sad who has depression">
           </div>
           <div class="col-md-6 text-column text-md-center">
-            <h3 class="my-4">Children:</h3>
-            <p class="">Expert mental health, ADHD & autism support for children and teenagers.
+            <h3 class="mb-5">Children:</h3>
+            <p class="">Expert mental health, ADHD & autism support for children and teenagers.</p>
+            <p class="mt-3"> A practical and goal-oriented therapy that teaches you how to develop effective coping mechanisms and manage your emotions in a healthy way.</p>
+            <p>Everyone deserves to feel empowered and supported. That’s why I’m here to guide individuals through therapy, a safe and confidential space to explore concerns, develop coping mechanisms, and achieve your goals. </p>
+            
         
           <a href="#" target="_blank" class="btn btn-warning mt-3">Get A Free Assesment</a>
           </div>
@@ -99,12 +105,13 @@
   
   <!--About Section-->
   <section id="about" class="p-5">
+  </section>
 
 
 
 <!--Pricing Section-->
-<section id="pricing" class="p-5"></section>
-<div class="panel pricing-table">
+<section id="pricing" class="p-5">
+<div class="panel pricing-table container">
 
     <div class="pricing-plan">
         <img src="#" alt="" class="pricing-img">
@@ -140,5 +147,6 @@
     </div>
 
 </div>
+</section>
 
 {% endblock %}
