@@ -13,12 +13,12 @@
     {{ form.as_p }}
     <a href="{% url 'post_detail' post.pk %}" class="btn btn-warning mx-5 my-4">Back</a>
     <button class="btn btn-success">Update Blog Post</button>
-    
-
-
 </form>
 </div>
-
+{% else %}
+<h2>Only Emily has authority to update a blog</h2><br>
+<a class="btn btn-primary" href="{% url 'home.html' %}">Return Home</a>
+{% endif %}
 
 
 {% endblock %}
