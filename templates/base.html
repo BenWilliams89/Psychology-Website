@@ -39,9 +39,9 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light dark-bg fixed-top navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home.html' %}"><span>Dr Emily Neale</span></a>
+            <a class="navbar-brand" href="{% url 'home.html' %}"><span class="logo">Dr Emily Neale</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -99,7 +99,7 @@
                         {% endif %}
                     {% else %}
 
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="#process">The Process</a>
                     </li>
