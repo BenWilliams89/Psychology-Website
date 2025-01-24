@@ -1,5 +1,13 @@
-section {
-    
+h6 {
+    color: #0934aa;
+}
+
+.bristolians{
+    color: #0934aa;
+}
+
+.emm{
+    border-radius: 10px;
 }
 
 .panel {
@@ -28,7 +36,7 @@ section {
 }
 
 .pricing-header {
-    color: #888;
+    color: #0b0a0a;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -36,7 +44,7 @@ section {
 .pricing-features {
     list-style: none;
     margin: 50px 0 25px;
-    color: #016ff9;
+    color: #242d37;
 }
 
 .pricing-features-item {
@@ -53,7 +61,7 @@ section {
 }
 
 .pricing-price {
-    color: #016ff9;
+    color: #3338a1;
     display: block;
     font-size: 32px;
     font-weight: 700;
@@ -62,7 +70,7 @@ section {
 .pricing-button {
     border: 1px solid #9dd1ff;
     border-radius: 10px;
-    color: #348efe;
+    color: #0934aa;
     display: inline-block;
     padding: 15px 35px;
     text-decoration: none;
@@ -71,11 +79,11 @@ section {
 }
 
 .pricing-button:hover, .pricing-button:focus {
-    background-color: #a590e890;
+    background-color: #f8f00ba0;
 }
 
 .pricing-button.is-featured {
-    background-color: #174872;
+    background-color: #e7bf0c;
     color: white;
 }
 
@@ -86,10 +94,51 @@ section {
 
 #who img{
     border-radius: 10px;
-    width:300px;
-    height:300px;
+    width:400px;
+    height:400px;
 }
 
+
+
+/* Footer Styling */
+
+#contact {
+    background-color: green;
+    color:white;
+    padding-bottom: 3rem;
+}
+
+#contact h2{
+    color:#ffffff;
+}
+
+#contact .sub-heading-color {
+    color: blue;
+}
+
+#contact i {
+    color: blue;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: blue;
+    font-size: 1.9rem;
+}
+
+#contact .social-links i:hover {
+    color: blue;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/* Media Quieries for who section & pricing section */
 
 @media (max-width: 768px) {
     #who .card {

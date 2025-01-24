@@ -6,7 +6,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #f3ca24;
 }
 
 .red-o {
@@ -18,7 +18,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #156b06;
 }
 
 .dark-bg {
@@ -30,7 +30,7 @@ body {
 }
 
 .card {
-    border: none;
+    border: fixed 2px blue;
     background-color: transparent;
 }
 
@@ -158,4 +158,12 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+#navbar {
+    background-color: green;
+}
+
+nav {
+    background-color: green;
 }

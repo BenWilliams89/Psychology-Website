@@ -16,14 +16,14 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>  
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
-                        <a class="btn btn-warning mx-4" href="{% url 'update_post' post.pk %}">Edit Blog</a>
-                        <a class="btn btn-danger mx-4" href="{% url 'delete_post' post.pk %}">Delete Blog</a>
+                        <a class="btn btn-warning btn-sm mx-4" href="{% url 'update_post' post.pk %}">Edit Blog</a>
+                        <a class="btn btn-danger btn-sm mx-4" href="{% url 'delete_post' post.pk %}">Delete Blog</a>
                 {% endif %}
                     {% endif %}
                         {% if user.username == 'Ben' %}
-                    <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
-                    <a class="btn btn-warning" href="{% url 'update_comment' post.pk %}">Edit Comment</a>
-                    <a class="btn btn-danger" href="{% url 'delete_comment' post.pk %}">Delete Comment</a>
+                    <a class="btn btn-primary btn-sm" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
+                    <a class="btn btn-warning btn-sm" href="{% url 'update_comment' post.pk %}">Edit Comment</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'delete_comment' post.pk %}">Delete Comment</a>
                         {% else %}
                     
                     <a class="btn btn-primary mx-4" href="{% url 'add_comment' post.pk %}">Add A Comment</a>

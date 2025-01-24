@@ -23,14 +23,14 @@
                         <hr>
                     {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
-                      <a class="btn btn-warning" href="{% url 'update_post' post.pk %}">Edit</a>
-                        <a class="btn btn-danger" href="{% url 'delete_post' post.pk %}">Delete</a>
+                      <a class="btn btn-warning btn-sm" href="{% url 'update_post' post.pk %}">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="{% url 'delete_post' post.pk %}">Delete</a>
                     {% endif %}
                         {% endif %}
                             {% if user.username == 'Ben' %}
-                                <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
-                                <a class="btn btn-warning" href="{% url 'update_comment' post.pk %}">Edit Comment</a>
-                                <a class="btn btn-danger" href="{% url 'delete_comment' post.pk %}">Delete Comment</a>
+                                <a class="btn btn-primary btn-sm" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
+                                <a class="btn btn-warning btn-sm mx-5" href="{% url 'update_comment' post.pk %}">Edit Comment</a>
+                                <a class="btn btn-danger btn-sm mx-3" href="{% url 'delete_comment' post.pk %}">Delete Comment</a>
                             {% else %}
                                 <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add A Comment</a>
                             {% endif %}
@@ -49,6 +49,8 @@
     </div>
 </div>
 </div>
+
+
 
 <script>
     document
