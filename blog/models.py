@@ -15,6 +15,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
+    comments = models.ForeignKey('Comment', on_delete=models.CASCADE, related_name='posts')
 
     class Meta:
         ordering = ["-created_on"]
@@ -38,6 +39,7 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ["created_on"]
+
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"

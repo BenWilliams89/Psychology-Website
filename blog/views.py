@@ -11,21 +11,13 @@ def home(request):
 
 
 
-#def add_comment(request):
-  #  if request.method == 'POST':
-      #  form = CommentForm(request.POST)
-      #  if form.is_valid():
-          #  form.save()
-           # return redirect('some-view-name')
-    #else:
-       # form = CommentForm()
-   # return render(request, 'your_template.html', {'form': form})
-
 
 class PostList(ListView):
     queryset = Post.objects.all()
     template_name = "blog.html"
     paginate_by = 6
+    
+    
 
 
 
@@ -33,6 +25,10 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'post_detail.html'
     success_url = reverse_lazy('blog.html')
+    def get(self, request, post_id):
+        post = Post.objects.get(id=post_id)
+        comments = post.comments.all()
+        return render(request, 'post_detail.html', {'post': post, 'comments': comments})
 
 
 
@@ -82,3 +78,5 @@ class DeleteCommentView(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('blog.html')
+
+
