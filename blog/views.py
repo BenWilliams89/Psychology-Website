@@ -18,10 +18,10 @@ class PostList(ListView):
     paginate_by = 6
     
     
-def post_detail(request, title, author, content):
+def post_detail(self, request, title, author, content):
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404
-    comments = post.comments.all().order_by("-created_on")
+    comment = post.comments.all().order_by("-created_on")
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if CommentForm.is_valid():
@@ -34,8 +34,8 @@ def post_detail(request, title, author, content):
 
     return render(request, 'post_detail.html',
                 {'post': post,
-                'comments':comments,
-                'comment': new_comment,
+                'comments': comments,
+                'comment': comment,
                 'comment_form': comment_form})
 
 
