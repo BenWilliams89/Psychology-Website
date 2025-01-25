@@ -1,11 +1,11 @@
 from django.urls import path
 from . import views
-from .views import PostDetail, PostAdd, UpdatePostView, DeletePostView, CommentAdd, UpdateCommentView, DeleteCommentView
+from .views import post_detail, PostAdd, UpdatePostView, DeletePostView, CommentAdd, UpdateCommentView, DeleteCommentView
 
 urlpatterns = [
     path('', views.home, name='home.html'),
     path('blog/', views.PostList.as_view(), name='blog.html'),
-    path('post/<int:pk>/', PostDetail.as_view(), name='post_detail'),
+    path('post/<int:pk>/', post_detail('request', 'title','author','content'), name='post_detail'),
     path('add_blog/', PostAdd.as_view(), name='add_post'),
     path('post/edit<int:pk>/', UpdatePostView.as_view(), name='update_post'),
     path('post/<int:pk>delete/', DeletePostView.as_view(), name='delete_post'),

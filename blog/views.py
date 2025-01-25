@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy
@@ -13,22 +13,40 @@ def home(request):
 
 
 class PostList(ListView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.filter(status=1)
     template_name = "blog.html"
     paginate_by = 6
     
     
+def post_detail(request, title, author, content):
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404
+    comments = post.comments.all().order_by("-created_on")
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if CommentForm.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+    else:
+        comment_form = CommentForm()
+
+    return render(request, 'post_detail.html',
+                {'post': post,
+                'comments':comments,
+                'comment': new_comment,
+                'comment_form': comment_form})
 
 
-
-class PostDetail(DetailView):
-    model = Post
-    template_name = 'post_detail.html'
-    success_url = reverse_lazy('blog.html')
-    def get(self, request, post_id):
-        post = Post.objects.get(id=post_id)
-        comments = post.comments.all()
-        return render(request, 'post_detail.html', {'post': post, 'comments': comments})
+#class PostDetail(DetailView):
+ #   model = Post
+  #  template_name = 'post_detail.html'
+   # success_url = reverse_lazy('blog.html')
+    #def get(self, request, post_id):
+        #post = Post.objects.get(id=post_id)
+        #comments = post.comments.all()
+        #return render(request, 'post_detail.html', {'post': post, 'comments': comments})
 
 
 
