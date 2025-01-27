@@ -6,20 +6,32 @@ Introduction:
 
 - I built a website for a doctor of psychology who is looking for her own website.
 
-- Frontend Development: HTML, CSS, JavaScript
-- Backend Development: Django web framework
-- Database Management: Django
-- Agile Methodology: Project planning and tracking using Agile principles
-- Version Control: Git & GitHub
-- AI Integration: Exploring the potential of AI tools in the development process.
+Website Goals:
 
-Key Objectives/Client Brief:
+- The website main goal is to get visitors to book an appointment with the doctor
+- Other goals are to ensure all information on the site is easily accessible
+- The website is desktop, tablet & mobile responsive
 
-- The website must be resposnive and work across all device sizes
-- The website must be able to allow users to make bookings/Appointments
-- The website must have a blog section so the doctor can add her articles and use SEO to attract clients
-- The website should have a clear message that showcases what services the doctor offers
-- The website should be easy to use & navigate 
+Key Features:
+
+- Website owner Emily is able to add, edit & delete blogs from the website.
+- This is easier then going to the admin panel each time, this was added to increase her efficency.
+- Website visitors are not able to edit, or delete blogs due to user autherisation
+- User autherisation is added to allow users to comment on blogs to make the website more engaging.
+- A booking form linked to Emilys email allows users to book a meeting directly into her calander.
+- Navbar & footer links have been added for easy accessability to different site sections.
+
+
+Built With:
+
+- HTML, CSS, & Bootstrap = Frontend
+- Python & Django = Backend
+- Django = Database
+
+Deployment:
+
+- Website is live on Heroku and github pages
+
 
 UX - User Experience:
 
@@ -32,7 +44,6 @@ Design Ideation:
 ![This is my colour pallete](/assets/coolers.png)
 - Credit to coolers
 
-- Wirefreames:
 
 Desktop Wireframe:
 
@@ -110,21 +121,6 @@ Security:
 - If a user does not have a login they are guided to a register page 
 
 
-Features:
-
--
-
-Built With:
-
-- HTML
-- CSS
-- Bootstrap
-- Python
-- Django
-
-Deployment:
-
-- Website is live on Heroku and github pages
 
 Testing:
 
