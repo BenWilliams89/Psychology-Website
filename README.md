@@ -126,7 +126,10 @@ Security:
 - Users must be loged in to leave a comment 
 - If a user does not have a login they are guided to a register page 
 
+Admin Panel:
 
+![Admin panel login](/assets/admin.png)
+![Admin panel behind the login](/assets/admin%20-%20bl.png)
 
 Testing:
 
@@ -135,6 +138,8 @@ Testing:
 Credits:
 
 - Massive Thanks to Dillon Mccaffrey, Mark Briscoe & Roo for all thier help and support when building this project.
+- Thanks to unsplash free images for all images
+- Thanks to chatgpt & copilot for help in rewording blogs and user stories
 
 
 
