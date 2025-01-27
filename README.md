@@ -1,5 +1,7 @@
 Capstone Project - Psychology Website:
 
+![Website Preview](/assets/emily.png)
+
 Introduction:
 
 - I built a website for a doctor of psychology who is looking for her own website.
