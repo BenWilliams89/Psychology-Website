@@ -199,3 +199,9 @@ body {
 .navbar-dark{
     color: white !important;
 }
+
+.fot {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}

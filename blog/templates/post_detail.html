@@ -47,11 +47,11 @@
     <a href="{% url 'blog.html' %}" class="btn btn-warning mx-3 row">Back</a>
     <a href="{% url 'home.html' %}" class="btn btn-primary mx-5 row">Book a Free Assesment</a>
     <hr>
-    <div class="col-6"></div>
+
+
+    <div class="col-6">
     <h2 class="mt-3 mb-2">Comments</h2>
-    {% if user.is_authenticated%}{% if not post.comments.all %}
-        no comments yet!
-    {% else %}
+    
         {% for comment in post.comments.all %}
             {{ comment.author }} <br> {{comment.created_on}} 
             <br>
@@ -59,9 +59,10 @@
             <a class="btn btn-info" href="{% url 'update_comment' post.pk comment.pk %}">Edit</a>
             <a class="btn btn-danger" href="{% url 'delete_comment' comment.pk %}">Delete</a> <br>
         {% endfor %}    
-    {% endif %}
     
-    {% endif %}
+    </div>
+    
+
     <div class="col-6">
         <br>
 
@@ -72,7 +73,7 @@
     <p class="container">You must log in to leave a comment <a class="btn btn-info" href="{% url 'account_signup' %}">Login</a></p>
     
     {% endif %}
-</div>
+    </div>
 
 
 
