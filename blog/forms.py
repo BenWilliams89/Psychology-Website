@@ -20,6 +20,6 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
         widgets = {
-            #'author': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Add your name'}),
+    
             'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Add your blog content here'}),
         }
