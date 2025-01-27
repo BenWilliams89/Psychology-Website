@@ -28,6 +28,10 @@ UX - User Experience:
 
 Design Ideation:
 
+- Colour Pallete:
+![This is my colour pallete](/assets/coolers.png)
+- Credit to coolers
+
 - Wirefreames:
 
 Desktop Wireframe:
@@ -99,12 +103,12 @@ User Stories:
 
 Security:
 
--
+- Allauth python libary was installed for authentication
+- The site owner (Emily) has a personal login details that allow only her to add or edit and remove a blog post
+- Additional logins are accepted with rules of only being able to update their own comments
+- Users must be loged in to leave a comment 
+- If a user does not have a login they are guided to a register page 
 
-
-Colors:
-
--
 
 Features:
 
@@ -112,11 +116,15 @@ Features:
 
 Built With:
 
--
+- HTML
+- CSS
+- Bootstrap
+- Python
+- Django
 
 Deployment:
 
--
+- Website is live on Heroku and github pages
 
 Testing:
 
@@ -124,7 +132,7 @@ Testing:
 
 Credits:
 
-- Massive Thanks to Dillon Mccaffrey & all of the Code Institute Staff who have helped me get this far.
+- Massive Thanks to Dillon Mccaffrey, Mark Briscoe & Roo for all thier help and support when building this project.
 
 
 
