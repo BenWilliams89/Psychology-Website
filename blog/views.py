@@ -108,13 +108,18 @@ class UpdateCommentView(UpdateView):
         comment_pk = self.kwargs.get('comment_pk')
         return get_object_or_404(Comment, pk=comment_pk)
 
-
+    def get_success_url(self):
+        post = self.object.post
+        return reverse('post_detail', kwargs={'pk': post.pk})
 
 class DeleteCommentView(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('blog.html')
 
+    def get_success_url(self):
+        post = self.object.post
+        return reverse('post_detail', kwargs={'pk': post.pk})
 
 # def comment(request, pk):
 #     post = get_object_or_404(Post, pk=pk, status=1)

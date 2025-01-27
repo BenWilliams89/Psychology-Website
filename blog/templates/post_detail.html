@@ -55,9 +55,9 @@
         {% for comment in post.comments.all %}
             {{ comment.author }} <br> {{comment.created_on}} 
             <br>
-            {{ comment.body }}
-            <a class="text-info" href="{% url 'update_comment' post.pk comment.pk %}">Edit</a>
-            <a class="text-danger" href="{% url 'delete_comment' comment.pk %}">Delete</a>
+            {{ comment.body }} <br>
+            <a class="btn btn-info" href="{% url 'update_comment' post.pk comment.pk %}">Edit</a>
+            <a class="btn btn-danger" href="{% url 'delete_comment' comment.pk %}">Delete</a> <br>
         {% endfor %}    
     {% endif %}
     
@@ -67,7 +67,7 @@
 
     {% if user.is_authenticated%}
 
-    <a href="{% url 'add_comment' post.pk %}">Add a comment</a>
+    <a class="btn btn-primary" href="{% url 'add_comment' post.pk %}">Add a comment</a>
     {% else %}
     <p class="container">You must log in to leave a comment <a class="btn btn-info" href="{% url 'account_signup' %}">Login</a></p>
     

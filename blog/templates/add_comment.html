@@ -7,13 +7,13 @@
 <div class="container mt-5 p-5 text-center">
 <br>
 {% if user.is_authenticated %}
-<h1>Add A Comment</h1>
+<h1>Add/Update Comment</h1>
 <br>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
-    <button class="btn btn-success" type="submit">Add A Comment</button>
+    <button class="btn btn-success" type="submit">Add/Update Comment</button>
 </form>
 </div>
 {% else %}

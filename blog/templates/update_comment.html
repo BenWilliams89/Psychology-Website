@@ -12,13 +12,14 @@
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <a href="{% url 'home.html' %}" class="btn btn-warning mx-5 my-4">Back</a>
-    <button class="btn btn-success">Add A Comment</button>
+    <a href="{% url 'post_detail' post.pk %}" class="btn btn-warning mx-5 my-4">Back</a>
+    <button class="btn btn-success">Edit Comment</button>
 </form>
 </div>
 {% else %}
 <h2>Only the comment author has authority to update a comment</h2><br>
 <a class="btn btn-primary" href="{% url 'home.html' %}">Return Home</a>
+<a href="{% url 'post_detail' post.pk %}" class="btn btn-warning mx-5 my-4">Back to Blog</a>
 {% endif %}
 
 
