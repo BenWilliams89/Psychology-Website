@@ -32,6 +32,11 @@ Deployment:
 
 - Website is live on Heroku and github pages
 
+Testing:
+
+- Lighthouse testing results
+![This is my desktop lightening results](/assets/website%20lighthouse%20testing%20-%20desktop.png)
+![This is my mobile lightening results](/assets/website%20lighthouse%20testing%20-%20mobile.png)
 
 UX - User Experience:
 
