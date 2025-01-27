@@ -5,6 +5,7 @@ Capstone Project - Psychology Website:
 Introduction:
 
 - I built a website for a doctor of psychology who is looking for her own website.
+- Here is the live link: https://psychologistwebsite-80b159481955.herokuapp.com/
 
 Website Goals:
 
