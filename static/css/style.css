@@ -19,10 +19,12 @@ body {
 
 .light-bg {
     background-color: #293a5d;
+    color: white;
 }
 
 .dark-bg {
     background-color: #28303f;
+    color: white;
 }
 
 .main-bg {
@@ -31,6 +33,7 @@ body {
 
 .background {
     background-color: #2c3e50;
+    color: white;
 }
 
 /*
@@ -178,10 +181,21 @@ body {
     color: white;
 }
 
-.navbar-custom .navlink ul li {
+.navbar-custom .navlink {
     color: #fff;
 }
 
 .navbar-custom .nav-link:hover {
-    background-color: #ece110;
+    background-color: #efefe0fc;
+}
+
+.navbarnav navbar-item navbar-link {
+    color: white;
+}
+
+.nav-item {
+    color: rgb(205, 16, 16) !important;
+}
+.navbar-dark{
+    color: white !important;
 }

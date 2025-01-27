@@ -22,13 +22,18 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk, status=1)
     comments = post.comments.all().order_by("-created_on")
     comment = None
+    print('one')
 
     if request.method == 'POST':
+        print('2')
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
+            print('3')
             comment = comment_form.save(commit=False)
+            print('4')
             comment.author = request.user
             comment.post = post
+            print(comment.author)
             comment.save()
     else:
         comment_form = CommentForm()
@@ -82,7 +87,34 @@ class CommentAdd(CreateView):
     template_name = 'add_comment.html'
     success_url = reverse_lazy('blog.html')
 
-    
+
+def comment(request, pk):
+    post = get_object_or_404(Post, pk=pk, status=1)
+    comments = post.comments.all().order_by("-created_on")
+    comment = None
+    print('one')
+
+    if request.method == 'POST':
+        print('2')
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            print('3')
+            comment = comment_form.save(commit=False)
+            print('4')
+            comment.author = request.user
+            comment.post = post
+            print(comment.author)
+            comment.save()
+        return render(request, 'blog.html')
+    else:
+        comment_form = CommentForm()
+
+    return render(request, 'add_comment.html', {
+        'post': post,
+        'comments': comments,
+        'comment': comment,
+        'comment_form': comment_form,
+    })
     
 
 
