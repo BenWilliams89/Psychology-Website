@@ -20,7 +20,7 @@ class PostList(ListView):
     
 def post_detail(self, request, title, author, content):
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404
+    post = get_object_or_404(queryset)
     comment = post.comments.all().order_by("-created_on")
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
