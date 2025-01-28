@@ -1,0 +1,207 @@
+h6 {
+    color: #0934aa;
+}
+
+.bristolians{
+    color: #0934aa;
+}
+
+.emm{
+    border-radius: 10px;
+}
+
+.panel {
+    background-color: #6321b0;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.pricing-header {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 50px 0 25px;
+    color: #eaeff4;
+}
+
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1f1ff;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+    color: #cc9c0a;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-button {
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #ffffff;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus {
+    background-color: #f8b10ba0;
+}
+
+.pricing-button.is-featured {
+    background-color: #f1a707;
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus {
+    background-color: #c6722e;
+    color: white;
+}
+
+#who img{
+    border-radius: 10px;
+    width:400px;
+    height:400px;
+}
+
+/* about styling */
+
+.emily {
+    width:400px;
+    height:400px;
+    border-radius: 20px;
+}
+
+
+
+/* Footer Styling */
+
+#contact {
+    background-color: green;
+    color:white;
+    padding-bottom: 3rem;
+}
+
+#contact h2{
+    color:#ffffff;
+}
+
+#contact .sub-heading-color {
+    color: blue;
+}
+
+#contact i {
+    color: blue;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: blue;
+    font-size: 1.9rem;
+}
+
+#contact .social-links i:hover {
+    color: blue;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/* Media Quieries for who section & pricing section */
+
+@media (max-width: 768px) {
+    #who .card {
+        min-height: 344px;
+    }
+
+    #who .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #who .row-2 .image-column {
+        order: 2;
+    }
+
+    #who .row-2 .text-column {
+        order: 1;
+    }
+
+    #tips .row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #who img { 
+        height: 300px;
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    #who img { 
+        height: 240px;
+        width: 240px;
+    }
+}
+
+    #who {
+        padding: 20px !important;
+        border-radius: 20px;
+    }
+
+    
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        padding: 25px 50px;
+    }
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+}
