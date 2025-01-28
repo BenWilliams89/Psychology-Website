@@ -71,6 +71,17 @@ Mobile Wireframes:
 The use of AI:
 
 - Chat GPT helped me create blog posts that were inline with the services that the website offer
+
+- Code Creation: Having Co-pilot set up the intial html doc type on pages was a great time saver.
+
+- Debugging: Using Copilot to help source ideas for bug fixed was a great learning experience, It also helped come up with soloutions I hadn't though of.
+
+- Automated Testing : adjustments were made off recommendations by copilot to help certain tests pass
+
+- Performance: Suggestions of how to code less where useful and impacful on my lightening score results
+
+- Overall Impact: AI is a fantastic resource to help improce my learning and coding.
+
 - AI was used to create the ERD from my inital outlines
 ![AI suggested this would be a good ERD for blog posts](/assets/Blog%20Posts%20ERD.png)
 ![AI suggested this would be a good ERD for blog comment posts](/assets/Comment%20ERD.png)
@@ -143,10 +154,13 @@ Testing:
 - Features Covered: CRUD operations, user authentication, and accessibility compliance.
 - Adjustments Made: Additional manual modifications to ensure comprehensive test coverage and inclusivity.
 
+![auto testing](/assets/auto%20test.png)
+
 Credits:
 
 - Massive Thanks to Dillon Mccaffrey, Mark Briscoe & Roo for all thier help and support when building this project.
 - Thanks to unsplash free images for all images
+- Thanks to calendly for the free booking calander I embeded on my website
 - Thanks to chatgpt & copilot for help in rewording blogs and user stories
 
 
