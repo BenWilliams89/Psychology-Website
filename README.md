@@ -130,7 +130,12 @@ Admin Panel:
 
 Testing:
 
--
+- HTML validation passed apart from outside javascript fuction to reduce header from navbar sections
+
+- ![HTML testing](/assets/html%20test%20emily.png)
+
+- CSS testing passed
+- ![Css testing](/assets/css%20test%20emily.png)
 
 Credits:
 
