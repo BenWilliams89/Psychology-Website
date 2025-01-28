@@ -68,11 +68,6 @@ Mobile Wireframes:
 ![this shows a wireframe of the mobile Booking section](/assets/Booking%20mobile.png)
 
 
-
-Agile Methodologies:
-
--
-
 The use of AI:
 
 - Chat GPT helped me create blog posts that were inline with the services that the website offer
@@ -125,6 +120,8 @@ Security:
 - Additional logins are accepted with rules of only being able to update their own comments
 - Users must be loged in to leave a comment 
 - If a user does not have a login they are guided to a register page 
+
+![This shows the authentication rules work](/assets/Auth%20table.png)
 
 Admin Panel:
 

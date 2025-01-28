@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #F9FAFC;
 }
+
 
 .brand {
     font-family: Lato, sans-serif;
@@ -204,4 +211,8 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
+    padding: 30px;
+    text-align: center;
+    
+    
 }
