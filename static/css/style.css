@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #F9FAFC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 
@@ -211,8 +218,9 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    padding: 30px;
+    padding: 70px;
     text-align: center;
+    margin-top: auto;
     
     
 }

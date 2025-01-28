@@ -36,7 +36,7 @@
     
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="main-bg d-flex flex-column min-vh-100">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark dark-bg fixed-top navbar-custom">
@@ -75,6 +75,10 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                                 href="#process">The Process</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                                href="#who">Who Is It For</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
@@ -141,33 +145,21 @@
 
     </main>
 
-    <!-- Footer
-    <footer id="contact" class="mt-auto">
-        <div class="container section">
-            <div class="row justify-contact-center">
-                <div class="col-12 text-center">
-                  <h2 class="display-6">Contact us!</h2>
-                </div> -->
+         <footer class="footer dark-bg mt-auto">
+        <div class=" container d-flex ">
+            
+                    <a class="fot" href="#process">The Process</a>
+                    <a class="fot" href="#who">Who Is This For</a>
+                    <a class="fot" href="#about">About</a>
+                    <a class="fot" href="#blog">Blog</a>
+                    <a class="fot" href="{% url 'account_login' %}">Register</a>
+                    <a class="fot" href="https://github.com/BenWilliams89" target="_blank">Website Made by Ben</a>
 
-    <footer class="footer dark-bg">
-        <div class=" container">
-            <div class="col-6">
-                <div class="#">
-                    <a class="fot col-2" href="#process">The Process</a>
-                    <a class="fot col-2" href="#who">Who Is This For</a>
-                    <a class="fot col-2" href="#about">About</a>
-                    <a class="fot col-2" href="#blog">Blog</a>
-                    <a class="fot col-2" href="{% url 'account_login' %}">LogIn</a>
-                    <a class="fot col-2" href="{% url 'account_login' %}">Register</a>
-                    <p class="p-2  text-white">Website Made By: <a href="https://github.com/BenWilliams89?tab=overview&from=2025-01-01&to=2025-01-20" target="_blank">Ben Williams</a></p>
-                </div>
-            </div>
-           
-            </div>
+        </div>
         
             
         </p>
-    </footer>
+    </footer> 
 
     <script>
         document
