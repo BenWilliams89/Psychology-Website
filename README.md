@@ -137,6 +137,12 @@ Testing:
 - CSS testing passed
 - ![Css testing](/assets/css%20test%20emily.png)
 
+- Automated Testing:
+
+- Tools Used: Django TestCase, GitHub Copilot.
+- Features Covered: CRUD operations, user authentication, and accessibility compliance.
+- Adjustments Made: Additional manual modifications to ensure comprehensive test coverage and inclusivity.
+
 Credits:
 
 - Massive Thanks to Dillon Mccaffrey, Mark Briscoe & Roo for all thier help and support when building this project.
