@@ -74,15 +74,15 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="#process">The Process</a>
+                                href="{% url 'home.html' %}">The Process</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="#who">Who Is It For</a>
+                                href="{% url 'home.html' %}">Who Is It For</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="#about">About</a>
+                                href="{% url 'home.html' %}">About</a>
                         </li>
                         
                         <li class="nav-item">
@@ -102,19 +102,19 @@
 
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#process">The Process</a>
+                            href="{% url 'home.html' %}">The Process</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#who">Who Is It For</a>
+                            href="{% url 'home.html' %}">Who Is It For</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#about">About</a>
+                            href="{% url 'home.html' %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#pricing">Pricing</a>
+                            href="{% url 'home.html' %}">Pricing</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
@@ -128,7 +128,7 @@
                         href="{% url 'account_signup' %}">Register</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link btn btn-warning" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="#booking">Book A Free Assesment</a>
+                        <a class="nav-link btn btn-warning" {% if request.path == logout_url %}active{% endif %} aria-current="page" href="{% url 'home.html' %}">Book A Free Assesment</a>
                     </li> 
                     {% endif %}
                 </ul>
